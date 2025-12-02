@@ -1,0 +1,895 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathleen H Davis, LISW-S | Online Therapy in Ohio</title>
+    <meta name="description" content="Licensed independent social worker providing compassionate, trauma-informed online therapy for adults in Ohio. Specializing in anxiety, depression, life transitions, and caregiver support.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #4a4a4a;
+            background: #fafaf8;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e8e8e3;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: normal;
+            color: #6b8e6b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4a4a4a;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .nav-links a:hover {
+            color: #6b8e6b;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                        url('assets/IMG_4507.jpeg') center/cover;
+            padding: 8rem 2rem;
+            text-align: center;
+            color: white;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: normal;
+            line-height: 1.4;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto 2.5rem;
+            font-family: 'Segoe UI', sans-serif;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.95);
+            color: #6b8e6b;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .cta-button-alt {
+            background: #6b8e6b;
+            color: white;
+        }
+
+        .cta-button-alt:hover {
+            background: #5a7a5a;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #4a4a4a;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image-container {
+            position: relative;
+            left: -60px;
+        }
+
+        .about-image {
+            width: 120%;
+            height: 500px;
+            background: 
+                url('assets/DSC_0797.jpeg') center center / cover no-repeat,
+                linear-gradient(135deg, #e8ede8 0%, #d4d9d4 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b8e6b;
+            font-size: 1.1rem;
+            font-family: 'Segoe UI', sans-serif;
+            border: 2px solid #d4d9d4;
+        }
+
+        .about-text {
+            line-height: 2;
+        }
+
+        .about-text h3 {
+            color: #6b8e6b;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: normal;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #5a5a5a;
+            font-size: 1.05rem;
+        }
+
+        .aboutme {
+            text-align: center;
+            color: #6b8e6b;
+            margin-top: 2.5rem;
+        }
+
+        .aboutme h3 {
+            font-weight: normal;
+            font-size: 1.4rem;
+        }
+
+        .cta-inline {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .statement-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('assets/IMG_4805.png') center/cover;
+            padding: 5rem 2rem;
+            margin: 0;
+            max-width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .statement-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .statement-content p {
+            font-size: 2.2rem;
+            line-height: 1.6;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+        }
+
+        .statement-subtitle {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            font-style: normal;
+            color: #ffffff;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+            font-weight: 600;
+        }
+
+        .services-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #5a5a5a;
+            font-size: 1.1rem;
+            line-height: 2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+        }
+
+        .service-item {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-left: 3px solid #6b8e6b;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .service-item h3 {
+            color: #6b8e6b;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .service-item ul {
+            list-style: none;
+            color: #5a5a5a;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .service-item li:before {
+            content: "• ";
+            color: #6b8e6b;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        #services {
+            background: #ffffff;
+            border-top: 1px solid #e8e8e3;
+            border-bottom: 1px solid #e8e8e3;
+        }
+
+        .approach-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('assets/IMG_4507.jpeg') center/cover;
+            padding: 5rem 2rem;
+            margin: 0;
+            max-width: 100%;
+            font-family: 'Georgia', serif;
+            line-height: 1.9;
+            text-align: center;
+            color: white;
+        }
+
+        .approach-section > * {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .approach-section h2 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .approach-section h3 {
+            color: #b8d4b8;
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: normal;
+        }
+
+        .approach-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .approach-section ul {
+            margin: 1.5rem auto;
+            max-width: 600px;
+            text-align: left;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .approach-section li {
+            margin-bottom: 0.5rem;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .connect-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.9rem 2rem;
+            background: #6b8e6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: all 0.3s;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .connect-button:hover {
+            background: #5a7a5a;
+            transform: translateY(-2px);
+        }
+
+        .faq-section {
+            background: linear-gradient(135deg, #f0f4f0 0%, #e8ede8 100%);
+            padding: 5rem 2rem;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .faq-section h2 {
+            color: #4a4a4a;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            margin-bottom: 1rem;
+            border: 1px solid #d4d9d4;
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #6b8e6b;
+            font-size: 1.05rem;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f9faf9;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            font-style: normal;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            color: #5a5a5a;
+            font-size: 1rem;
+            line-height: 1.8;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 0 2rem 1.5rem 2rem;
+            max-height: 600px;
+        }
+
+        .testimonials-section {
+            background: linear-gradient(rgba(107, 142, 107, 0.08), rgba(107, 142, 107, 0.12));
+            padding: 5rem 2rem;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .testimonials-section h2 {
+            color: #4a4a4a;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin: 2rem auto 3rem;
+            max-width: 1200px;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border: 1px solid #d4d9d4;
+            border-radius: 3px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #5a5a5a;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #d4e0d4 0%, #c8d8c8 100%);
+            text-align: center;
+            padding: 5rem 2rem;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-section p {
+            margin-bottom: 2rem;
+            color: #4a4a4a;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1.05rem;
+        }
+
+        .contact-logo {
+            max-width: 150px;
+            margin: 0 auto 2rem;
+            height: 150px;
+            background: linear-gradient(135deg, #6b8e6b 0%, #5a7a5a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        footer {
+            background: #3a3a3a;
+            color: #e8e8e3;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            color: #c8c8c8;
+        }
+
+        .footer-section h4 {
+            color: #b8c8b8;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .footer-section p {
+            color: #c8c8c8;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0.5rem 0;
+        }
+
+        .footer-section a {
+            color: #b8c8b8;
+            text-decoration: none;
+            display: block;
+            margin: 0.3rem 0;
+        }
+
+        .footer-section a:hover {
+            color: #d4e0d4;
+        }
+
+        .psychology-today-badge {
+            margin-top: 1.5rem;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #5a5a5a;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        @media (max-width: 968px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image-container {
+                position: static;
+                top: 0;
+            }
+
+            .about-image {
+                height: 350px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .statement-content p {
+                font-size: 1.8rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .statement-content p {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kathleen H Davis, LISW-S</div>
+            <ul class="nav-links">
+                <li><a href="#about">About Kathleen</a></li>
+                <li><a href="#services">My Services</a></li>
+                <li><a href="#approach">My Approach</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Where your story and healing meet</h1>
+        <p>Empowering you with compassionate, evidence-based, trauma-informed support for your wellness journey</p>
+        <a href="mailto:kathleenhdavis@hushmail.com" class="cta-button">Contact Me</a>
+    </div>
+
+    <section id="about">
+       
+        <div class="about-content">
+            <div class="about-image-container">
+                <div class="about-image"></div>
+            </div>
+            <div class="about-text">
+                <h3>Hi, I'm Kathleen.</h3>
+                <p>
+                    I'm a licensed independent social worker with supervision designation who supports adults in navigating life's challenges and living life more authentically.
+                </p>
+                <p>
+                    I work with individuals facing life transitions, anxiety, depression, caregiver stress (professional and family), parenting challenges, and chronic illness and pain. I hold a Master's degree in Social Work from Virginia Commonwealth University and an undergraduate degree in Psychology with a concentration in Special Education from the University of Virginia.
+                </p>
+                <p>
+                    With 20+ years of experience, I've had the privilege of working with adults, adolescents, and children in private practice, community mental health services, schools, and caregiver support groups. I have passionately served as an author, faculty member, and mental health advocate with the American Academy of Pediatrics. I'm also a wife, mom, daughter, friend, and caregiver who believes deeply in lifelong learning, the interconnection of mind, body, and spirit, and the healing power of safe, supportive relationships.
+                </p>
+                <div class="aboutme">
+                    <h3>I'm so glad you're here.</h3>
+                </div>
+                <div class="cta-inline">
+                    <a href="mailto:kathleenhdavis@hushmail.com" class="cta-button cta-button-alt">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="statement-section">
+        <div class="statement-content">
+            <p>"The only way out is through…"<br>And the best way through is together.</p>
+        </div>
+        <div style="margin-top: 2.5rem;">
+            <a href="mailto:kathleenhdavis@hushmail.com" class="cta-button">Let's Talk</a>
+        </div>
+    </div>
+
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="services-intro">
+            <p style="margin-bottom: 2rem;">
+                Whether you're navigating a life transition, caregiving stressors, the weight of past trauma, or simply feeling disconnected from yourself or others, you do not need to go through it alone.
+            </p>
+            <p style="margin-bottom: 3rem;">
+                Through individual, online therapy sessions, we'll work to broaden your awareness, strengthen your inner resources, and gently unwind the habits that no longer serve you, helping you navigate life with more clarity, calm, and vitality.
+            </p>
+            <p style="font-weight: 600; margin-bottom: 2rem;">
+                I specialize in supporting individuals experiencing:
+            </p>
+        </div>
+        <div class="services-grid">
+            <div class="service-item">
+                <ul>
+                    <li>Anxiety</li>
+                    <li>Depression</li>
+                    <li>Life Transitions</li>
+                    <li>Aging</li>
+                    <li>Pregnancy and Post-partum</li>
+                    <li>Relationship/Attachment Issues</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <ul>
+                    <li>Family and/or Professional Caregiving</li>
+                    <li>Parenting</li>
+                    <li>Chronic illness and pain</li>
+                    <li>PTSD and trauma</li>
+                    <li>Grief and loss</li>
+                    <li>Spirituality/Faith identity and questioning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="approach-section" id="approach">
+        <h2>My Approach</h2>
+    
+        <p>To best meet your unique needs, my approach is holistic, client-driven, strengths-based and trauma-informed.</p>
+    
+        <p>Our work together will blend practical skill building with emotional insight and healing.</p>
+    
+        <p>My approach integrates evidence-based models, including:</p>
+    
+        <ul>
+            <li>CBT (Cognitive Behavior Therapy)</li>
+            <li>ACT (Acceptance and Commitment Therapy)</li>
+            <li>DBT (Dialect Behavior Therapy)</li>
+            <li>EMDR (Eye-Movement Desensitization and Reprocessing)</li>
+            <li>IFS (Internal Family Systems)</li>
+        </ul>
+    
+        <p>We will practice skills to increase self-awareness, improve your relationship with your Self and others, and make life choices that better align with your values.</p>
+        
+        <p>Beyond coping, we'll look at how the past influences the present and work toward more adaptive patterns that support meaningful, lasting healing.</p>
+    
+        <p>Our work together will be:</p>
+    
+        <ul>
+            <li>Collaborative</li>
+            <li>Responsive to your pace and needs</li>
+            <li>Goal-oriented</li>
+            <li>Grounded in your strengths</li>
+        </ul>
+    
+        <p>I believe that every person has an innate capacity to heal, grow, and transform. It is never too late.</p>
+    
+        <div style="text-align: center;">
+            <a href="mailto:kathleenhdavis@hushmail.com" class="connect-button">Let's Talk</a>
+        </div>
+    </section>
+
+    <div class="faq-section" id="faq">
+        <h2>FAQs</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">How do I know if therapy is right for me?</div>
+                <div class="faq-answer">
+                    I'm a firm believer that we all can benefit from greater self-awareness and more adaptive ways of navigating what life brings, to help live our lives with purpose, authenticity, and joy.
+                    <br><br>
+                    If you're navigating emotional challenges, major life transitions, caregiving stress, or feeling overwhelmed and wanting to strengthen your well-being, therapy can provide especially valuable tools and support for growth and healing.
+                    <br><br>
+                    Whether you're new to therapy or have been in therapy for years, it's natural to have questions or concerns. I offer a free 15-minute phone consultation to discuss your needs and determine if my approach aligns with your goals. Feel free to reach out!
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Why Online Therapy?</div>
+                <div class="faq-answer">
+                    Online therapy increases access to care. For those with busy lives, caregiving responsibilities, or mobility limitations, online therapy increases access to routine professional support.
+                    <br><br>
+                    Online therapy offers the convenience of meeting from a location of your choosing, reduces travel time and costs, increases flexibility in scheduling appointments, and eliminates geographical constraints.
+                    <br><br>
+                    Rest assured that attuned, connected therapeutic relationships CAN and DO occur through online therapy.
+                    <br><br>
+                    If you are new to, or at all uncomfortable with, using online health platforms, please reach out with questions. I can help walk you through it.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What can I expect during my first therapy session?</div>
+                <div class="faq-answer">During your first session, we'll explore what brings you to therapy, clarify your goals, and address any questions you may have about the process. It's an opportunity for us to connect and see whether working together feels like a good fit.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How often should I attend therapy sessions and for how long?</div>
+                <div class="faq-answer">
+                    The frequency of therapy sessions and length of treatment depends on individual needs and goals. During your initial consultations, we'll work together to develop a personalized treatment plan that includes a recommended session frequency based on your specific needs and circumstances.
+                    <br><br>
+                    Typically, I recommend starting with regular sessions either weekly or every other week. As your needs evolve, we can adjust the schedule—from periodic check-ins to more frequent support during challenging times.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What are your fees for service and is insurance accepted?</div>
+                <div class="faq-answer">
+                    I am an out-of-network provider and do not bill insurance directly, in order to provide personalized, high-quality care without the constraints of insurance plans.
+                    <br><br>
+                    Individual sessions are $150 per session.
+                    <br><br>
+                    I believe in supporting access to quality care and offer a limited number of sliding-scale slots based on eligibility. I am also happy to provide superbills for those seeking out-of-network reimbursement.
+                    <br><br>
+                    Please reach out with any questions.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What form of payment do you accept?</div>
+                <div class="faq-answer">I accept private payment by credit card, check, HSA.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do I contact you or schedule an appointment?</div>
+                <div class="faq-answer">
+                    Simply click on the 'Contact Me' button, call me at 440-289-3088 or email me at kathleenhdavis@hushmail.com. We will schedule a free consultation to discuss whether we're a good fit for each other. Let's talk!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials-section" id="testimonials">
+        <h2>What Others Are Saying</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "You were there when I really needed you. You're the 1st one I shared all of this with and I felt a connection right away."
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "I don't trust people very well, but I developed a connection with you that totally changed how I view therapy and how I view myself--for the better! I always know you genuinely care and I appreciate all the skills I've learned with you. I feel so much more capable. It's noticeable how much better I feel and how I manage challenges that come up in life differently now."
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "You helped me through one of worst parts of my life and helped me celebrate some of the best parts of my life. I really value the support you gave me and will never forget what I've learned with you."
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section" id="contact">
+        <div class="contact-logo">[Logo Placeholder]</div>
+        <h2>Reach out to schedule a consultation or inquire about services</h2>
+        <a href="mailto:kathleenhdavis@hushmail.com" class="cta-button cta-button-alt">Contact Me</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Kathleen H. Davis, LISW-S</h4>
+                <p>Licensed Independent Social Worker with Supervision Designation</p>
+                <p style="margin-top: 1.5rem;">Providing compassionate, evidence-based, trauma-informed online therapy for adults in Ohio.</p>
+                <div class="psychology-today-badge" style="margin-top: 1.5rem;">
+                    <!-- Professional verification provided by Psychology Today -->
+                    <a href="https://www.psychologytoday.com/profile/1641852    " class="sx-verified-seal"></a>
+                    <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js    " data-badge="11" data-id="1641852" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMS9wcm9maWxlLzE2NDE4NTI/Y2FsbGJhY2s9c3hjYWxsYmFjay=="></script>
+                    <!-- End Verification -->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Phone: <a href="tel:440-289-3088">440-289-3088</a></p>
+                <p>Email: <a href="mailto:kathleenhdavis@hushmail.com">kathleenhdavis@hushmail.com</a></p>
+                <p>Location: Online/Chagrin Falls, OH</p>
+                <p style="margin-top: 1rem;">
+                 
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#about">About Kathleen</a>
+                <a href="#services">My Services</a>
+                <a href="#approach">My Approach</a>
+                <a href="#faq">FAQs</a>
+                <a href="#testimonials">Testimonials</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kathleen H. Davis, LISW-S. All rights reserved. | Licensed Independent Social Worker with Supervision Designation</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all other FAQs
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Toggle current FAQ if it wasn't already active
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
