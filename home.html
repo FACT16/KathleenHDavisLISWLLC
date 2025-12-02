@@ -285,58 +285,68 @@
             border-top: 1px solid #e8e8e3;
             border-bottom: 1px solid #e8e8e3;
         }
-
         .approach-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('assets/IMG_4507.jpeg') center/cover;
-            padding: 5rem 2rem;
-            margin: 0;
-            max-width: 100%;
-            font-family: 'Georgia', serif;
-            line-height: 1.9;
-            text-align: center;
-            color: white;
-        }
+    position: relative;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
 
-        .approach-section > * {
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.approach-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    transform: translateX(-50%);
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('assets/IMG_4375.jpg') center/cover;
+    z-index: -1;
+}
 
-        .approach-section h2 {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            font-size: 2rem;
-            color: white;
-        }
 
-        .approach-section h3 {
-            color: #b8d4b8;
-            font-size: 1.3rem;
-            margin: 2rem 0 1rem 0;
-            font-weight: normal;
-        }
+/* Remove the max-width restriction from children */
+.approach-section > * {
+    margin: 0 auto;
+    /* no max-width here */
+}
 
-        .approach-section p {
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-            color: white;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-        }
+/* Optional: if you want the TEXT still centered and readable */
+.approach-section h2,
+.approach-section h3,
+.approach-section p,
+.approach-section ul {
+    max-width: 900px;   /* keeps text readable */
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .approach-section ul {
-            margin: 1.5rem auto;
-            max-width: 600px;
-            text-align: left;
-            font-family: 'Segoe UI', sans-serif;
-        }
+.approach-section h2 {
+    color: white;
+}
 
-        .approach-section li {
-            margin-bottom: 0.5rem;
-            color: white;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-        }
+.approach-section h3 {
+    color: var(--pale-green);
+    margin: 2rem 0 1rem;
+}
+
+.approach-section p {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.approach-section ul {
+    max-width: 600px;
+    margin: 1.5rem auto;
+    text-align: left;
+}
+
+.approach-section li {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
 
         .connect-button {
             display: inline-block;
